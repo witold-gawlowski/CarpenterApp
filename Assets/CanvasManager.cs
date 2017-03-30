@@ -87,11 +87,14 @@ public class CanvasManager : MonoBehaviour {
 
   public void RecalculatePrices()
   {
+    //precalculate work prices
     float cenaRobociznyI = (100 - System.Convert.ToSingle(procentRobociznyI.text)) / System.Convert.ToSingle(procentRobociznyI.text)*
       System.Convert.ToSingle(cenaDrewnaBrutto.text);
     float cenaRobociznyII = (100 - System.Convert.ToSingle(procentRobociznyII.text)) / System.Convert.ToSingle(procentRobociznyII.text) *
       System.Convert.ToSingle(cenaDrewnaBrutto.text)*3000 / System.Convert.ToSingle(pricePerM3.text);
     print(System.Convert.ToSingle(cenaDrewnaBrutto.text) * 3000 + "roboII");
+
+    // calculate and fill in work prices and final prices
     robociznaI.text = cenaRobociznyI.ToString();
     robociznaII.text = cenaRobociznyII.ToString();
     cenaI.text = (cenaRobociznyI + System.Convert.ToSingle(dodatkiBrutto.text) + System.Convert.ToSingle(cenaDrewnaBrutto.text)).ToString();
@@ -100,6 +103,7 @@ public class CanvasManager : MonoBehaviour {
 
   public void RecalculateExtras()
   {
+    //calculate dodatkiBrutto
     float result = 0;
     for( int i = 0; i < extrasCounts.Length; i++ )
     {
@@ -112,11 +116,14 @@ public class CanvasManager : MonoBehaviour {
       result += count * cost;
     }
     dodatkiBrutto.text = (result * 1.23f).ToString();
+
+    //recalculate final prices
     RecalculatePrices();
   }
 
   public void RecalculateWoodVolume()
   {
+    //recalculate wood volume
     print("recalculate wood");
     float result = 0;
     if(counts.Length != heights.Length || heights.Length != lengths.Length || lengths.Length != widths.Length)
@@ -138,6 +145,7 @@ public class CanvasManager : MonoBehaviour {
         length = System.Convert.ToSingle(lengths[i].text);
       result += count * width * height * length;
     }
+    result /= 1000000;
     print("changing wood volume");
     objetoscDrewna.text = result.ToString();
 
@@ -148,9 +156,11 @@ public class CanvasManager : MonoBehaviour {
 
     if (pricePerM3.text != "")
     {
-      cenaDrewnaNetto.text = (System.Convert.ToSingle(pricePerM3.text) * System.Convert.ToSingle(razemDrewno.text)/1000000).ToString();
+      cenaDrewnaNetto.text = (System.Convert.ToSingle(pricePerM3.text) * System.Convert.ToSingle(razemDrewno.text)).ToString();
       cenaDrewnaBrutto.text = (System.Convert.ToSingle(cenaDrewnaNetto.text)*1.23f).ToString();
     }
+
+    //recalculate final prices
     RecalculatePrices();
   }
 
@@ -166,4 +176,7 @@ public class CanvasManager : MonoBehaviour {
     przyciski[0].onClick.Invoke();
   }
 
+  public void Koniec() {
+    Application.Quit();
+  }
 }

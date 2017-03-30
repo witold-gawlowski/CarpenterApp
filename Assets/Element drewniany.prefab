@@ -274,7 +274,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "szeroko\u015B\u0107[cm]"
+  m_Text: "szeroko\u015B\u0107 [cm]"
 --- !u!114 &114052811980992678
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -316,9 +316,9 @@ MonoBehaviour:
   m_IgnoreLayout: 0
   m_MinWidth: -1
   m_MinHeight: 80
-  m_PreferredWidth: -1
+  m_PreferredWidth: 95.9
   m_PreferredHeight: 80
-  m_FlexibleWidth: -1
+  m_FlexibleWidth: 1
   m_FlexibleHeight: -1
 --- !u!114 &114101797259034346
 MonoBehaviour:
@@ -434,7 +434,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "d\u0142ugo\u015B\u0107[cm]"
+  m_Text: "d\u0142ugo\u015B\u0107 [cm]"
 --- !u!114 &114246267125730850
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -675,7 +675,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "grubo\u015B\u0107[cm]"
+  m_Text: "grubo\u015B\u0107 [cm]"
 --- !u!114 &114429120966026516
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -723,9 +723,9 @@ MonoBehaviour:
   m_IgnoreLayout: 0
   m_MinWidth: -1
   m_MinHeight: 80
-  m_PreferredWidth: -1
+  m_PreferredWidth: 95.9
   m_PreferredHeight: 80
-  m_FlexibleWidth: -1
+  m_FlexibleWidth: 1
   m_FlexibleHeight: -1
 --- !u!114 &114587016257692942
 MonoBehaviour:
@@ -899,9 +899,9 @@ MonoBehaviour:
   m_IgnoreLayout: 0
   m_MinWidth: -1
   m_MinHeight: 80
-  m_PreferredWidth: -1
+  m_PreferredWidth: 95.9
   m_PreferredHeight: 80
-  m_FlexibleWidth: -1
+  m_FlexibleWidth: 1
   m_FlexibleHeight: -1
 --- !u!114 &114826905968943772
 MonoBehaviour:
@@ -971,9 +971,9 @@ MonoBehaviour:
   m_IgnoreLayout: 0
   m_MinWidth: -1
   m_MinHeight: 80
-  m_PreferredWidth: -1
+  m_PreferredWidth: 30
   m_PreferredHeight: 80
-  m_FlexibleWidth: -1
+  m_FlexibleWidth: 0.2
   m_FlexibleHeight: -1
 --- !u!114 &114945804456437862
 MonoBehaviour:
